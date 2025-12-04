@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- ========== START SCREEN ========== -->
+    <div id="start-screen" class="screen active">
+      <h1>Ready for a Brain Challenge?</h1>
+      <p>Hit the button below to test how sharp you are!</p>
+      <button id="start-btn">Begin Quiz</button>
+    </div>
+
+    <!-- ========== QUIZ SCREEN ========== -->
+    <div id="quiz-screen" class="screen">
+      <div class="quiz-header">
+        <h2 id="question-text">Question will load here...</h2>
+
+        <div class="quiz-info">
+          <p>
+            Question <span id="current-question">1</span> /
+            <span id="total-questions">5</span>
+          </p>
+          <p>Score: <span id="score">0</span></p>
+        </div>
+      </div>
+
+      <div id="answers-container" class="answers-container">
+        <!-- JS will inject answers inside -->
+      </div>
+
+      <div class="progress-bar">
+        <div id="progress" class="progress"></div>
+      </div>
+    </div>
+
+    <!-- ========== RESULT SCREEN ========== -->
+    <div id="result-screen" class="screen">
+      <h1>Your Final Score</h1>
+
+      <div class="result-info">
+        <p>
+          You achieved <span id="final-score">0</span> out of
+          <span id="max-score">5</span>
+        </p>
+        <div id="result-message">Great effort!</div>
+      </div>
+
+      <button id="restart-btn">Try Again</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
